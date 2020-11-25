@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 for month in {01..12}; do
-    dea_filename="dea_chpclim_50n_50s_$month.tif";
+    dea_filename="deafrica_chpclim_50n_50s_$month.tif";
     echo $dea_filename;
     
     if [ ! -f "$dea_filename" ]; then 
@@ -17,6 +17,6 @@ for month in {01..12}; do
 	fi;
 	
 	#unzip $filename;
-	rio cogeo create --overview-resampling average $filename $deafrica_filename;
+	rio cogeo create --overview-resampling average $filename $dea_filename;
     fi;
 done;
