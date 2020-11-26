@@ -44,7 +44,7 @@ def main(year, crs = 'EPSG:6933', res = 10):
     # extract extents over Africa
     gmw = gpd.read_file(gmw_shp)
 
-    deafrica_extent = gpd.read_file('../deafrica-extent/africa-extent.json')
+    deafrica_extent = gpd.read_file('https://github.com/digitalearthafrica/deafrica-extent/raw/master/africa-extent.json')
     deafrica_extent = deafrica_extent.to_crs(gmw.crs)
 
     # find everything within deafrica_extent
