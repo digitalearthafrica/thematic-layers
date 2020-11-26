@@ -25,4 +25,3 @@ for grid in grids:
         subprocess.call(f'wget {url}', shell=True)
 
 
-africa-extent-bbox.json
