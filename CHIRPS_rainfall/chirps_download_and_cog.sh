@@ -14,10 +14,10 @@ if [ ! -f "$dea_filename" ]; then
 
     if [ ! -f "$filename" ]; then
         url="https://data.chc.ucsb.edu/products/CHIRPS-2.0/africa_daily/tifs/p05/$year/$filename";
-        wget $url;
+        wget $url.gz;
         if [ "$?" != 0 ]; then
-            url="$url.gz";
             wget $url;
+        else
             gunzip $filename.gz;
         fi;
         
@@ -26,4 +26,8 @@ if [ ! -f "$dea_filename" ]; then
     fi;
     
 rio cogeo create --overview-resampling average $filename $dea_filename;
+python ../generate_stac.py --product chirps --platform chirps --band-name precipitation --datetime ${year}-${month}-${day}T12:00:00Z --url_root s3://deafrica-data-dev/chirps/${year}${month}${day} $dea_filename;
+
+# put data in s3
+
 fi;
