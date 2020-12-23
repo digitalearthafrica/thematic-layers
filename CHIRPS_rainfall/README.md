@@ -6,4 +6,4 @@ This script converts the CHIRPS rainfall data over Africa into cloud optimzed fo
 
 The product is produced by the Climate Hazards Group, Department of Geography, University of California at Santa Barbara, in collaboration with the USGS Famine Early Warning Systems Network (FEWS NET).
 
-More information about the product can be found at https://data.chc.ucsb.edu/products/CHIRPS-2.0/README-CHIRPS.txt.
+More information about the product can be found at https://www.chc.ucsb.edu/data/chirps and https://www.nature.com/articles/sdata201566.

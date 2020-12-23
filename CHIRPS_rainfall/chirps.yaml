@@ -1,4 +1,4 @@
-name: chirps
+name: chirps_daily
 description: Climate Hazards Group Infrared Precipitation with Stations (CHIRPS) is a quasi-global (50S-50N), gridded 0.05 degree resolution, 1981 to near-real time precipitation time series. The product is produced by the Climate Hazards Group, Department of Geography, University of California at Santa Barbara, in collaboration with the USGS Famine Early Warning Systems Network (FEWS NET). More information about the product can be found at https://data.chc.ucsb.edu/products/CHIRPS-2.0/README-CHIRPS.txt.
 metadata_type: eo3
 
@@ -9,13 +9,13 @@ storage:
         latitude: -0.05000000074505806
 
 metadata:
-    product_type: chirps
+    product_type: chirps_daily
     format:
         name: GeoTIFF
 
 measurements:
     - name: 'precipitation'
-      aliases: ['precip', 'rainfall']
+      aliases: ['Precipitation', 'precip', 'rainfall']
       dtype: float32
       nodata: -9999.
       units: 'mm'
