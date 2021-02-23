@@ -4,7 +4,12 @@
 
 # based on curent date, this script determines latest month of available data and download them
 
-current_date=`date -I`;# -d $1`;
+if [[ $# -eq 1 ]]; then
+    current_date=`date -I -d $1`;
+else
+    current_date=`date -I`;
+fi
+
 current_month=`date -d $current_date +"%Y-%m"`;
 current_day=`date -d $current_date +"%d"`;
 

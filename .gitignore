@@ -1,4 +1,6 @@
 *.tif
 *.pyc
 *.vrt
+.ipynb_checkpoints
+*.json
 *~

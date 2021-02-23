@@ -26,8 +26,11 @@ if [ ! -f "$dea_filename" ]; then
     fi;
     
 rio cogeo create -q --overview-resampling average $filename $dea_filename;
-python ../generate_stac.py --product chirps_daily --platform chirps --band-name precipitation --datetime ${year}-${month}-${day}T12:00:00Z --url_root s3://deafrica-data-dev/chirps/${year}${month}${day} $dea_filename;
+#python ../generate_stac.py --product chirps_daily --platform chirps --band-name precipitation --datetime ${year}-${month}-${day}T12:00:00Z --url_root s3://deafrica-data-dev/chirps/${year}${month}${day} $dea_filename;
 
 # put data in s3
+mv $dea_filename /g/data/CHIRPS/daily/;
+chmod 440 /g/data/CHIRPS/daily/$dea_filename;
+rm $filename;
 
 fi;

@@ -1,0 +1,21 @@
+name: chpclim
+description: Climate Hazards Group Precipitation Climatology (CHPclim) is a monthly quasi-global satellite and observation based precipitation climatology product. The product is produced by the Climate Hazards Group, Department of Geography, University of California at Santa Barbara, in collaboration with the USGS Famine Early Warning Systems Network (FEWS NET). The monthly precipitation is provided at a spatial resolution of 0.05 deg and covers the latitude range of 50 degrees south to 50 degrees north. The dataset has been converted into cloud optimzed format by DEAfrica.
+metadata_type: eo
+
+storage:
+    crs: EPSG:4326
+    resolution:
+        longitude: 0.05
+        latitude: -0.05
+
+metadata:
+    product_type: chpclim
+    format:
+        name: GeoTIFF
+
+measurements:
+    - name: 'rainfall'
+      aliases: ['precipitation', 'precip']
+      dtype: int16
+      nodata: 0
+      units: '1'
